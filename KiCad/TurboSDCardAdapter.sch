@@ -1,0 +1,361 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Turbo SD card adapter"
+Date "2022-03-15"
+Rev "1"
+Comp ""
+Comment1 "Turbo SD card adapter for Acorn 8 bit computers"
+Comment2 "Uses user port (port B) on 6522 VIA"
+Comment3 "Requires Adafruit micro SD card level shifter breakout"
+Comment4 ""
+$EndDescr
+$Comp
+L Connector_Generic:Conn_02x10_Odd_Even IDC1
+U 1 1 623065F3
+P 4300 3150
+F 0 "IDC1" H 4350 3767 50  0000 C CNN
+F 1 "User Port" H 4350 3676 50  0000 C CNN
+F 2 "Connector_IDC:IDC-Header_2x10_P2.54mm_Vertical" H 4300 3150 50  0001 C CNN
+F 3 "~" H 4300 3150 50  0001 C CNN
+	1    4300 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x08 CON1
+U 1 1 623084D6
+P 7550 2950
+F 0 "CON1" H 7630 2942 50  0000 L CNN
+F 1 "SD Card Breakout" H 7630 2851 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical" H 7550 2950 50  0001 C CNN
+F 3 "~" H 7550 2950 50  0001 C CNN
+	1    7550 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4100 2750 3850 2750
+Wire Wire Line
+	3850 2750 3850 2550
+Wire Wire Line
+	4100 2850 3850 2850
+Wire Wire Line
+	3850 2850 3850 2750
+Connection ~ 3850 2750
+Wire Wire Line
+	4100 2950 3850 2950
+Wire Wire Line
+	3850 2950 3850 3050
+Wire Wire Line
+	4100 3050 3850 3050
+Connection ~ 3850 3050
+Wire Wire Line
+	3850 3050 3850 3150
+Wire Wire Line
+	4100 3150 3850 3150
+Connection ~ 3850 3150
+Wire Wire Line
+	3850 3150 3850 3250
+Wire Wire Line
+	4100 3250 3850 3250
+Connection ~ 3850 3250
+Wire Wire Line
+	3850 3250 3850 3350
+Wire Wire Line
+	4100 3350 3850 3350
+Connection ~ 3850 3350
+Wire Wire Line
+	3850 3350 3850 3450
+Wire Wire Line
+	4100 3450 3850 3450
+Connection ~ 3850 3450
+Wire Wire Line
+	3850 3450 3850 3550
+Wire Wire Line
+	4100 3550 3850 3550
+Connection ~ 3850 3550
+Wire Wire Line
+	3850 3550 3850 3650
+Wire Wire Line
+	4100 3650 3850 3650
+Connection ~ 3850 3650
+Wire Wire Line
+	3850 3650 3850 3850
+Wire Wire Line
+	7350 2650 7200 2650
+Wire Wire Line
+	7200 2650 7200 2300
+Wire Wire Line
+	7350 2850 7200 2850
+Wire Wire Line
+	7200 2850 7200 3250
+$Comp
+L power:+5V #PWR0101
+U 1 1 6230C0AC
+P 7200 2300
+F 0 "#PWR0101" H 7200 2150 50  0001 C CNN
+F 1 "+5V" H 7215 2473 50  0000 C CNN
+F 2 "" H 7200 2300 50  0001 C CNN
+F 3 "" H 7200 2300 50  0001 C CNN
+	1    7200 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0102
+U 1 1 6230D382
+P 3850 2400
+F 0 "#PWR0102" H 3850 2250 50  0001 C CNN
+F 1 "+5V" H 3865 2573 50  0000 C CNN
+F 2 "" H 3850 2400 50  0001 C CNN
+F 3 "" H 3850 2400 50  0001 C CNN
+	1    3850 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 6230DF70
+P 3850 2550
+F 0 "#FLG0101" H 3850 2625 50  0001 C CNN
+F 1 "PWR_FLAG" V 3850 2677 50  0000 L CNN
+F 2 "" H 3850 2550 50  0001 C CNN
+F 3 "~" H 3850 2550 50  0001 C CNN
+	1    3850 2550
+	0    -1   -1   0   
+$EndComp
+Connection ~ 3850 2550
+Wire Wire Line
+	3850 2550 3850 2400
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 6230EE25
+P 3850 3850
+F 0 "#FLG0102" H 3850 3925 50  0001 C CNN
+F 1 "PWR_FLAG" V 3850 3977 50  0000 L CNN
+F 2 "" H 3850 3850 50  0001 C CNN
+F 3 "~" H 3850 3850 50  0001 C CNN
+	1    3850 3850
+	0    -1   -1   0   
+$EndComp
+Connection ~ 3850 3850
+Wire Wire Line
+	3850 3850 3850 4050
+$Comp
+L power:GND #PWR0103
+U 1 1 6230FDD4
+P 3850 4050
+F 0 "#PWR0103" H 3850 3800 50  0001 C CNN
+F 1 "GND" H 3855 3877 50  0000 C CNN
+F 2 "" H 3850 4050 50  0001 C CNN
+F 3 "" H 3850 4050 50  0001 C CNN
+	1    3850 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0104
+U 1 1 6230FFFD
+P 7200 3950
+F 0 "#PWR0104" H 7200 3700 50  0001 C CNN
+F 1 "GND" H 7205 3777 50  0000 C CNN
+F 2 "" H 7200 3950 50  0001 C CNN
+F 3 "" H 7200 3950 50  0001 C CNN
+	1    7200 3950
+	1    0    0    -1  
+$EndComp
+Text Label 4600 2750 0    50   ~ 0
+CB1
+Text Label 4600 2850 0    50   ~ 0
+CB2
+NoConn ~ 7350 2750
+Wire Wire Line
+	7350 3250 7200 3250
+Connection ~ 7200 3250
+Wire Wire Line
+	7200 3250 7200 3950
+NoConn ~ 4600 3450
+NoConn ~ 4600 3650
+NoConn ~ 4600 3550
+Text Label 4600 2950 0    50   ~ 0
+PB0
+Text Label 4600 3050 0    50   ~ 0
+PB1
+Wire Wire Line
+	4600 2750 4900 2750
+Text Label 7250 3250 0    50   ~ 0
+~CS
+Text Label 7250 3150 0    50   ~ 0
+DI
+Text Label 7250 3050 0    50   ~ 0
+D0
+Text Label 7250 2950 0    50   ~ 0
+CLK
+NoConn ~ 7350 3350
+$Comp
+L TTL_74xx:74LS125 U1
+U 2 1 6230A278
+P 5950 3150
+F 0 "U1" H 5950 3467 50  0000 C CNN
+F 1 "74HCT125" H 5950 3376 50  0000 C CNN
+F 2 "Surface mount:SOIC-14_3.9x8.7mm_P1.27mm" H 5950 3150 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS125" H 5950 3150 50  0001 C CNN
+	2    5950 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L TTL_74xx:74LS125 U1
+U 3 1 6230B1BB
+P 5950 3850
+F 0 "U1" H 5950 4167 50  0000 C CNN
+F 1 "74HCT125" H 5950 4076 50  0000 C CNN
+F 2 "Surface mount:SOIC-14_3.9x8.7mm_P1.27mm" H 5950 3850 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS125" H 5950 3850 50  0001 C CNN
+	3    5950 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L TTL_74xx:74LS125 U1
+U 1 1 62309155
+P 5950 2500
+F 0 "U1" H 5950 2817 50  0000 C CNN
+F 1 "74HCT125" H 5950 2726 50  0000 C CNN
+F 2 "Surface mount:SOIC-14_3.9x8.7mm_P1.27mm" H 5950 2500 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS125" H 5950 2500 50  0001 C CNN
+	1    5950 2500
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5650 2500 5550 2500
+Wire Wire Line
+	5550 2500 5550 2850
+Wire Wire Line
+	5550 3150 5650 3150
+Wire Wire Line
+	6250 3150 6350 3150
+Wire Wire Line
+	6350 3150 6350 3850
+Wire Wire Line
+	6350 3850 6250 3850
+Wire Wire Line
+	4600 2850 5550 2850
+Connection ~ 5550 2850
+Wire Wire Line
+	5550 2850 5550 3150
+Wire Wire Line
+	5950 2750 5350 2750
+Wire Wire Line
+	5350 2750 5350 3150
+Wire Wire Line
+	4600 3150 5350 3150
+Wire Wire Line
+	5950 3400 5950 3450
+Wire Wire Line
+	5950 3450 5350 3450
+Wire Wire Line
+	5350 3450 5350 3250
+Wire Wire Line
+	5350 3250 4600 3250
+Wire Wire Line
+	5950 4100 5950 4150
+Wire Wire Line
+	5950 4150 5250 4150
+Wire Wire Line
+	5250 4150 5250 3350
+Wire Wire Line
+	5250 3350 4600 3350
+Wire Wire Line
+	4600 3050 4900 3050
+Wire Wire Line
+	4900 3050 4900 2750
+Wire Wire Line
+	7350 2950 6600 2950
+Wire Wire Line
+	6600 2950 6600 1950
+Wire Wire Line
+	6600 1950 4900 1950
+Wire Wire Line
+	4900 1950 4900 2750
+Connection ~ 4900 2750
+Wire Wire Line
+	5150 2950 5150 3850
+Wire Wire Line
+	5150 3850 5650 3850
+Wire Wire Line
+	4600 2950 5150 2950
+Wire Wire Line
+	6350 3150 7350 3150
+Connection ~ 6350 3150
+Wire Wire Line
+	6450 3050 6450 2500
+Wire Wire Line
+	6450 2500 6250 2500
+Wire Wire Line
+	6450 3050 7350 3050
+$Comp
+L TTL_74xx:74LS125 U1
+U 4 1 62366E77
+P 5800 5200
+F 0 "U1" H 5800 5517 50  0000 C CNN
+F 1 "74HCT125" H 5800 5426 50  0000 C CNN
+F 2 "Surface mount:SOIC-14_3.9x8.7mm_P1.27mm" H 5800 5200 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS125" H 5800 5200 50  0001 C CNN
+	4    5800 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L TTL_74xx:74LS125 U1
+U 5 1 62367E4C
+P 6750 5200
+F 0 "U1" H 6980 5246 50  0000 L CNN
+F 1 "74HCT125" H 6980 5155 50  0000 L CNN
+F 2 "Surface mount:SOIC-14_3.9x8.7mm_P1.27mm" H 6750 5200 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS125" H 6750 5200 50  0001 C CNN
+	5    6750 5200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5500 5200 5400 5200
+Wire Wire Line
+	5400 5700 6750 5700
+Wire Wire Line
+	6750 5700 6750 5800
+Connection ~ 6750 5700
+$Comp
+L power:GND #PWR0105
+U 1 1 6236D1A5
+P 6750 5800
+F 0 "#PWR0105" H 6750 5550 50  0001 C CNN
+F 1 "GND" H 6755 5627 50  0000 C CNN
+F 2 "" H 6750 5800 50  0001 C CNN
+F 3 "" H 6750 5800 50  0001 C CNN
+	1    6750 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0106
+U 1 1 6236D5BE
+P 6750 4550
+F 0 "#PWR0106" H 6750 4400 50  0001 C CNN
+F 1 "+5V" H 6765 4723 50  0000 C CNN
+F 2 "" H 6750 4550 50  0001 C CNN
+F 3 "" H 6750 4550 50  0001 C CNN
+	1    6750 4550
+	1    0    0    -1  
+$EndComp
+NoConn ~ 6100 5200
+Wire Wire Line
+	5400 5200 5400 5700
+Wire Wire Line
+	6750 4550 6750 4650
+Wire Wire Line
+	6750 4650 6350 4650
+Wire Wire Line
+	6350 4650 6350 5550
+Wire Wire Line
+	6350 5550 5800 5550
+Wire Wire Line
+	5800 5550 5800 5450
+Connection ~ 6750 4650
+Wire Wire Line
+	6750 4650 6750 4700
+$EndSCHEMATC
